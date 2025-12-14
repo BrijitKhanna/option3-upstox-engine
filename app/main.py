@@ -1,6 +1,10 @@
 from fastapi import FastAPI
 
-app = FastAPI(title="Option 3 Upstox Engine")
+app = FastAPI()
+
+@app.get("/")
+def root():
+    return {"message": "running"}
 
 @app.get("/health")
 def health():
