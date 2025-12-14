@@ -4,6 +4,7 @@ import os
 router = APIRouter()
 
 WEBHOOK_SECRET = os.getenv("TV_WEBHOOK_SECRET")
+print("Loaded TV_WEBHOOK_SECRET:", WEBHOOK_SECRET)
 
 @router.post("/tradingview")
 async def tradingview_webhook(request: Request):
